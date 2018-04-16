@@ -1,0 +1,25 @@
+{
+  "name": "simple_blog",
+  "version": "1.0.0",
+  "description": "xxx",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha tests/*"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "xxx",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "consolidate": "^0.15.1",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "mongodb": "^3.1.0-beta4",
+    "pug": "^2.0.3",
+    "supertest": "^3.1.0"
+  }
+}
