@@ -1,0 +1,28 @@
+extends index.pug
+
+block content
+	h4 Nouvel article
+	hr
+	form(name="createArticleForm" action="/post/create-article" method="post")
+		div
+			div
+				label Titre
+			input(type="text", name="title", required="true")
+		hr
+		div
+			div
+				label Résumé
+			textarea(cols="30", rows="10", name="resume", required="true")
+		hr
+		div
+			div
+				label Contenu
+			textarea(cols="30", rows="10", name="content", required="true")
+		hr
+		div
+			div
+				label Auteur
+			input(type="text", name="author", required="true")
+		hr
+		div
+			input(type="submit", value="Créer")

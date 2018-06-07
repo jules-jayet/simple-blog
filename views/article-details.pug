@@ -1,0 +1,27 @@
+extends index.pug
+
+block content
+	h4 #{article.title}
+	p #{article.date}
+	p #{article.author}
+	p #{article.content}
+	div
+		h5 Ajouter un commentaire
+		div
+			form(name="createCommentForm" action="/post/create-comment" method="post")
+				input(type="hidden", name="articleId", value=article._id)
+				div
+					label Pseudo
+				div
+					input(type="text", name="author", required="true")
+				div
+					label Commentaire
+				div
+					textarea(name="content", required="true")
+				div
+					input(type="submit", value="Envoyer")
+		h5 Commentaires
+		each comment in article.comments
+			div
+				h6 #{comment.date} | #{comment.author}
+				p #{comment.content}

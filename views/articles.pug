@@ -1,0 +1,21 @@
+extends index.pug
+
+block content
+	h4 Les articles
+	each article in articles
+		div(class="article-container")
+			h5 #{article.title}
+			p #{article.resume}
+			p #{article.author}
+			- var link = "/articles/" + article._id
+			a(href=link) Voir plus
+	p
+		if prevExists
+			- var prev = "/articles?p=" + Number(page*1-1)
+			a(href=prev) Page précédente
+			span &nbsp;|&nbsp;
+		span #{page}
+		if nextExists
+			span &nbsp;|&nbsp;
+			- var next = "/articles?p=" + Number(page*1+1)
+			a(href=next) Page suivante

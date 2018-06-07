@@ -1,0 +1,23 @@
+extends index.pug
+
+block content
+	h4 Gestion des articles
+	table(border="1")
+		thead
+			tr
+				th Identifiant
+				th Titre
+				th Date
+				th Auteur
+				th &nbsp;
+		tbody
+			each article in articles
+				tr(class="article-row")
+					td #{article._id}
+					td #{article.title}
+					td #{article.date}
+					td #{article.author}
+					td
+						form(action="post/delete-article", name="deleteArticleForm", method="post")
+							input(type="hidden", name="articleId", value=article._id)
+							input(type="submit", value="Supprimer")
