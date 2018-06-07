@@ -4,6 +4,10 @@ Avant toute chose, s'assurer d'avoir bien lancé la base de données via la comm
 
 > systemctl start mongod
 
+## Installer les dépendances
+
+> npm install
+
 ## Lancer l'application
 
 On peut lancer l'application via la commande suivante :
